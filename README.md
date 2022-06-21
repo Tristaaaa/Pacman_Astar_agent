@@ -47,14 +47,14 @@
 > **goal: find best “food” heuristic function with the distance**
 1. 考量的條件有 props 種類(landmine, powerpellet, pellet, ghost-power mode)、和 「食物」的相差距離、其附近的「食物」密度。
 後來找出最佳的食物權重計算方式是 = 食物相鄰的食物數量 * 食物的分數權重 / 食物與我方的距離的1.5次方
-2. 距離的考量，我們有實驗了[1, 2]之間不同次方係數，因為若權重分配太大，可能會沒辦法到達食物密度高的地區，反之太小的話可能會有捨近求遠的結果，因此最終選擇係數為1.5。
+2. 距離的考量，有實驗了[1, 2]之間不同次方係數，因為若權重分配太大，可能會沒辦法到達食物密度高的地區，反之太小的話可能會有捨近求遠的結果，因此最終選擇係數為1.5。
 3. 以下是食物的分數權重在不同 power mode 的情況下的分配，因為在遊戲規則吃到 ghost 的話可以獲得 200 分，因此我方的策略就是在要盡量吃到越多 ghost，所以一開始要先想辦法吃到 power pellet，然後抓鬼。
 
 | mode | landmine | power pellet | pellet | ghost |
 | --------------- | --------------- | --------------- | --------------- | --------------- |
 | normal | 5 | 3000 | 10 | x |
 | power | 5 | 200 |  10 | 400 |
-> 至於 landmine 因為只有釋放炸彈的功能，而非我們所優先考量的。
+> 至於 landmine 因為只有釋放炸彈的功能，不需優先考量的。
 
 - Experiment 3: safety distance
 > **goal: determine the optimal steps to keep away from ghost**
