@@ -1,4 +1,4 @@
-### AI Game Project
+### 2022 AI_Capstone Game Project
 ## Pacman_Astar_agent
 此 game project 是需要使用某種自訂的遊戲策略，在新版 Pacman 這個遊戲中取得勝利，也就是要在有限的時間內，與其他玩家競爭，想辦法吃到更多分數的同時也要閃避鬼避免被鬼吃掉。
 採取的遊戲策略是利用 A* Search Algorithm 實作出 pacman agent，以下將逐一敘述 A* Search Algorithm的實作細節以及實驗結果和心得。
